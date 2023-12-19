@@ -15,11 +15,33 @@ function renderRamen(ramenArray) {
 
     ramenArray.forEach((ramenBowl) => {
     //   console.log(ramenBowl.ramenImage); 
-      const ramenImgTag = document.createElement("img");
-      ramenImgTag.src = ramenBowl.ramenImage;
+      
+    
+    const ramenImgTag = document.createElement("img");
+      ramenImgTag.src = ramenBowl.image;
       ramenImage.append(ramenImgTag);
+
+      ramenImgTag.addEventListener('click', handleClick)
+      function handleClick(){
+        //console.log(ramenBowl)
+    
+      }
+
+
+
     });
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     const ramenForm = document.querySelector('form');
     ramenForm.addEventListener('submit', (e) => handleNewRamen(e));
 
